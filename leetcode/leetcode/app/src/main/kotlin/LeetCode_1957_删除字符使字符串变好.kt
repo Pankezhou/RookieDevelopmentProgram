@@ -31,7 +31,7 @@ package org.example.app
 s 只包含小写英文字母。
  */
 
-class Solution {
+class Solution1957 {
     fun makeFancyString(s: String): String {
         if (s.length < 3) return s // 长度小于3无需删除
 

@@ -17,7 +17,7 @@ n == height.length
 1 <= n <= 2 * 10^4
 0 <= height[i] <= 10^5
  */
-class Solution {
+class Solution42 {
     fun trap(height: IntArray): Int {
         var result = 0
         var leftIndex = 0

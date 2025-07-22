@@ -17,7 +17,7 @@ package org.example.app
 s 仅由数字和英文字母组成
  */
 
-class Solution {
+class Solution5 {
     fun longestPalindrome(s: String): String {
         if (s.isEmpty()) {
             return "";
