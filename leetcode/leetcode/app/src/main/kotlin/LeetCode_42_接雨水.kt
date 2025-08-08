@@ -28,8 +28,8 @@ class Solution42 {
         //相遇时退出
         while (leftIndex < rightIndex) {
             //分别取左右的最大值
-            leftMax = Math.max(height[leftIndex], leftMax)
-            rightMax = Math.max(height[rightIndex], rightMax)
+            leftMax = height[leftIndex].coerceAtLeast(leftMax)
+            rightMax = height[rightIndex].coerceAtLeast(rightMax)
             //当左边小于右边高度时计算 最左侧和当前位置的差值
             if (height[leftIndex] < height[rightIndex]) {
                 result = leftMax - height[leftIndex] + result

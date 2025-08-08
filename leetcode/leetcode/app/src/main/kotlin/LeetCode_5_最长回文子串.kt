@@ -27,7 +27,7 @@ class Solution5 {
         for (i in s.indices) {
             val length1 = getLength(s, i, i)
             val length2 = getLength(s, i, i+1)
-            val len = Math.max(length2,length1)
+            val len = length2.coerceAtLeast(length1)
             if (len > end -start) {
                 start = i- (len-1)/2
                 end = i+ len/2
@@ -38,11 +38,11 @@ class Solution5 {
 
     fun getLength(s: String, left : Int, right: Int ):Int {
         var tempLeft = left
-        var rempRight = right
-        while (tempLeft >= 0 && rempRight < s.length && s.get(tempLeft) == s.get(rempRight)) {
+        var tempRight = right
+        while (tempLeft >= 0 && tempRight < s.length && s[tempLeft] == s[tempRight]) {
             --tempLeft
-            ++rempRight
+            ++tempRight
         }
-        return rempRight-1 - (tempLeft+1) + 1
+        return tempRight-1 - (tempLeft+1) + 1
     }
 }
